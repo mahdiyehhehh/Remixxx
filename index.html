@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remix — Coffee. Music. Culture. | Gulberg III, Lahore</title>
+<meta name="description" content="Remix is a coffee shop in Gulberg III, Lahore built on flavor and frequency, rooted in memory. Espresso, sandwiches, patisserie, vinyl, and culture — open daily 8am–11pm.">
+
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="ambient" aria-hidden="true"></div>
+
+<nav class="nav">
+  <div class="nav__inner glass">
+    <a href="#top" class="nav__brand">
+      <img src="logo.png" alt="Remix logo">
+      REMIX
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <div class="nav__links" id="navLinks">
+      <a href="#pillars">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#discounts">Discounts</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+      <a href="#visit" class="glass-btn glass-btn--solid nav__cta">Get Directions</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img src="hero-bg-blurred.jpg" alt="" aria-hidden="true">
+    </div>
+    <div class="wrap">
+      <div class="hero__content">
+        <div class="hero__meta">
+          <span class="glass-pill">☕ COFFEE</span>
+          <span class="glass-pill">🎵 MUSIC</span>
+          <span class="glass-pill">🎨 CULTURE</span>
+        </div>
+        <h1>Built on flavor and frequency, rooted in memory.</h1>
+        <p class="sub">A Gulberg III coffeehouse where small-batch espresso, vinyl on the wall, and a kitchen full of sandwiches all answer to the same name.</p>
+        <div class="hero__actions">
+          <a href="#menu" class="glass-btn glass-btn--solid">View the menu</a>
+          <a href="#visit" class="glass-btn">Open daily · 8am–11pm</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll"><span class="line"></span> Scroll</div>
+  </section>
+
+  <!-- ============ PILLARS ============ -->
+  <section id="pillars">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">The Room</div>
+        <h2>Coffee. Music. Culture.</h2>
+        <p>Everything on the counter and on the walls answers to one of three names. Nothing here is filler.</p>
+      </div>
+      <div class="pillars__grid">
+        <article class="pillar-card reveal">
+          <img src="sandwich-coffee.jpg" alt="Iced coffee and a beef sandwich on a tray at Remix">
+          <div class="pillar-card__tag">01 — Coffee</div>
+          <h3>Coffee</h3>
+          <p>Espresso pulled with intent, signature lattes built to be remembered, and enough matcha and frappes to make it through a Lahore afternoon.</p>
+        </article>
+        <article class="pillar-card reveal">
+          <img src="dj.jpg" alt="DJ mixing on a turntable and controller at Remix">
+          <div class="pillar-card__tag">02 — Music</div>
+          <h3>Music</h3>
+          <p>A wall of vinyl, a rotary phone that still works, and a booth that turns into a DJ set the moment the sun goes down.</p>
+        </article>
+        <article class="pillar-card reveal">
+          <img src="hustle-art.jpg" alt="Original graffiti-style artwork on the wall at Remix">
+          <div class="pillar-card__tag">03 — Culture</div>
+          <h3>Culture</h3>
+          <p>Comics on the counter, local art on the panelling, and a room designed to be sat in slowly — not rushed through.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section id="menu">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">On The Counter</div>
+        <h2>The menu</h2>
+        <p>Coffee, sandwiches, and patisserie — all made in-house. Prices in PKR.</p>
+      </div>
+
+      <div class="markers reveal">
+        <div class="marker">
+          <div class="marker__label">Peanut Butter Latte</div>
+          <div class="marker__price">Rs 750 / 850</div>
+          <div class="marker__line"></div>
+          <div class="marker__dot"></div>
+        </div>
+        <div class="marker">
+          <div class="marker__label">Tiramisu Latte</div>
+          <div class="marker__price">Rs 750 / 850</div>
+          <div class="marker__line"></div>
+          <div class="marker__dot"></div>
+        </div>
+        <div class="marker">
+          <div class="marker__label">Salted Caramel Latte</div>
+          <div class="marker__price">Rs 700 / 750</div>
+          <div class="marker__line"></div>
+          <div class="marker__dot"></div>
+        </div>
+      </div>
+
+      <div class="menu-tabs reveal" role="tablist">
+        <button class="menu-tab glass-btn is-active" data-tab="coffee" role="tab" aria-selected="true">Coffee</button>
+        <button class="menu-tab glass-btn" data-tab="sandwiches" role="tab" aria-selected="false">Sandwiches</button>
+        <button class="menu-tab glass-btn" data-tab="patisserie" role="tab" aria-selected="false">Patisserie</button>
+      </div>
+
+      <!-- COFFEE PANEL -->
+      <div class="menu-panel is-active" id="panel-coffee">
+        <div class="menu-group">
+          <h4>Classic Coffees &amp; Lattes</h4>
+          <div class="menu-item"><div><div class="menu-item__name">Espresso</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">450</span><span class="oz">8oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Americano</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">500</span><span class="oz">8oz</span></div><div class="price-slot"><span class="num">600</span><span class="oz">12oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Cappuccino</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">600</span><span class="oz">8oz</span></div><div class="price-slot"><span class="num">650</span><span class="oz">12oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Latte</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">650</span><span class="oz">8oz</span></div><div class="price-slot"><span class="num">700</span><span class="oz">12oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Cortado</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">600</span><span class="oz">8oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Flat White</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">650</span><span class="oz">8oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Spanish Latte</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">700</span><span class="oz">8oz</span></div><div class="price-slot"><span class="num">750</span><span class="oz">12oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Vanilla Sea Salt Latte</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">700</span><span class="oz">8oz</span></div><div class="price-slot"><span class="num">750</span><span class="oz">12oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Salted Caramel Latte</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">700</span><span class="oz">8oz</span></div><div class="price-slot"><span class="num">750</span><span class="oz">12oz</span></div></div></div>
+        </div>
+
+        <div class="menu-group">
+          <h4>Signature Drinks</h4>
+          <div class="menu-item"><div><div class="menu-item__name">Peanut Butter Latte</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">750</span><span class="oz">8oz</span></div><div class="price-slot"><span class="num">850</span><span class="oz">12oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Hazelnut Mocha Latte</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">750</span><span class="oz">8oz</span></div><div class="price-slot"><span class="num">850</span><span class="oz">12oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Lotus Cookie Butter</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">750</span><span class="oz">8oz</span></div><div class="price-slot"><span class="num">850</span><span class="oz">12oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Tiramisu Latte</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">750</span><span class="oz">8oz</span></div><div class="price-slot"><span class="num">850</span><span class="oz">12oz</span></div></div></div>
+        </div>
+
+        <div class="menu-group">
+          <h4>Blended Drinks</h4>
+          <div class="menu-item"><div><div class="menu-item__name">Vanilla Bean Frappe</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">950</span><span class="oz">12oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Caramel Frappe</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">950</span><span class="oz">12oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Fudge Brownie Frappe</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">950</span><span class="oz">12oz</span></div></div></div>
+        </div>
+
+        <div class="menu-group">
+          <h4>Matcha, Tea &amp; More</h4>
+          <div class="menu-item"><div><div class="menu-item__name">Vanilla Matcha</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">950</span><span class="oz">12oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Strawberry Matcha</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">950</span><span class="oz">12oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Peach Iced Tea</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">600</span><span class="oz">12oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Raspberry Iced Tea</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">600</span><span class="oz">12oz</span></div></div></div>
+          <div class="menu-item"><div><div class="menu-item__name">Belgian Intense Chocolate</div></div><div class="menu-item__price"><div class="price-slot"><span class="num">800</span><span class="oz">8oz</span></div><div class="price-slot"><span class="num">850</span><span class="oz">12oz</span></div></div></div>
+        </div>
+
+        <div class="menu-group">
+          <h4>Add-ons</h4>
+          <div class="addons">
+            <div class="addons__row"><span>Lactose free / skimmed milk</span><span>Rs 100</span></div>
+            <div class="addons__row"><span>Sugar free syrup</span><span>Rs 100</span></div>
+            <div class="addons__row"><span>Decaf shot</span><span>Rs 250</span></div>
+            <div class="addons__row"><span>Extra shot</span><span>Rs 250</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SANDWICHES PANEL -->
+      <div class="menu-panel" id="panel-sandwiches">
+        <div class="menu-group">
+          <h4>Sandwiches</h4>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Caprese Sandwich</div><div class="menu-item__desc">Fresh mozzarella, basil pesto, seasoned tomatoes and arugula, with a balsamic glaze on toasted baguette.</div></div>
+            <div class="menu-item__price"><span>1450</span></div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Brie &amp; Cranberry Open Sandwich</div><div class="menu-item__desc">Creamy brie, cranberry compote, caramelized onion jam and toasted sesame on sourdough.</div></div>
+            <div class="menu-item__price"><span>1850</span></div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Korean Egg Drop Sandwich</div><div class="menu-item__desc">Japanese milk bread layered with a buttery tornado omelette, beef bacon, chives, cheddar and soy dijonnaise.</div></div>
+            <div class="menu-item__price"><span>1350</span></div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Spicy Asian Beef Sandwich</div><div class="menu-item__desc">Wok-charred beef with spicy Asian slaw, pickled vegetables and fresh herbs on Japanese milk bread.</div></div>
+            <div class="menu-item__price"><span>1750</span></div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Roast Beef Sandwich</div><div class="menu-item__desc">Pastrami with sauerkraut, Dijon mustard, arugula and wasabi mayo on cumin whole wheat bread.</div></div>
+            <div class="menu-item__price"><span>1950</span></div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Buttermilk Fried Chicken Sando</div><div class="menu-item__desc">Crispy fried chicken with a tangy slaw, dill pickles and chili jam, finished with buttermilk dressing on Japanese milk bread.</div></div>
+            <div class="menu-item__price"><span>1450</span></div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Tuna Salad Sandwich</div><div class="menu-item__desc">Umami tuna salad with dashi mayo, crisp lettuce and cheddar on toasted milk bread.</div></div>
+            <div class="menu-item__price"><span>1350</span></div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Rainbow Roasted Veggie Sandwich</div><div class="menu-item__desc">A vibrant stack of grilled and roasted vegetables with hummus, fresh mint and arugula on focaccia.</div></div>
+            <div class="menu-item__price"><span>950</span></div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Smoked Salmon Bagel</div><div class="menu-item__desc">Smoked salmon with herb cream cheese, pickled onion, capers and fresh dill on a bagel.</div></div>
+            <div class="menu-item__price"><span>2090</span></div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Spicy Chicken Caesar Wrap</div><div class="menu-item__desc">Buffalo chicken, crisp lettuce, pickled cabbage and parmesan, tossed in creamy Caesar dressing, wrapped with crunchy croutons.</div></div>
+            <div class="menu-item__price"><span>950</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PATISSERIE PANEL -->
+      <div class="menu-panel" id="panel-patisserie">
+        <div class="menu-group">
+          <h4>Savory</h4>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Hashbrown Quiche Lorraine</div><div class="menu-item__desc">Crispy hashbrown base with eggs, cheese, and bacon.</div></div>
+            <div class="menu-item__price"><span>690</span></div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Creamy Chicken &amp; Leek Danish</div><div class="menu-item__desc">Flaky pastry with sautéed leeks, chicken and cheese.</div></div>
+            <div class="menu-item__price"><span>550</span></div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Feta, Tomato &amp; Basil Danish</div><div class="menu-item__desc">Buttery pastry with feta, cherry tomatoes, fresh basil, and olive oil.</div></div>
+            <div class="menu-item__price"><span>450</span></div>
+          </div>
+        </div>
+        <div class="menu-group">
+          <h4>Sweet</h4>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Ruby &amp; White Chocolate Matcha Cookie</div><div class="menu-item__desc">Soft cookie with matcha and white chocolate chunks.</div></div>
+            <div class="menu-item__price"><span>590</span></div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Tiramisu</div><div class="menu-item__desc">Classic Italian layered dessert with coffee-soaked ladyfingers, cocoa and vanilla cream.</div></div>
+            <div class="menu-item__price"><span>950</span></div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Flourless Chocolate Torte</div><div class="menu-item__desc">Rich chocolate cake with a silky finish.</div></div>
+            <div class="menu-item__price"><span>950</span></div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Lemon Drizzle Pound Cake</div><div class="menu-item__desc">Moist lemon cake with a sweet, tangy lemon glaze.</div></div>
+            <div class="menu-item__price"><span>410</span></div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Dark Chocolate Salted Caramel Brownie</div><div class="menu-item__desc">Fudgy brownie swirled with caramel and a sprinkle of sea salt.</div></div>
+            <div class="menu-item__price"><span>750</span></div>
+          </div>
+          <div class="menu-item">
+            <div><div class="menu-item__name">Classic Chocolate Chip Cookie</div><div class="menu-item__desc">Golden cookie with a soft center and plenty of chocolate chips.</div></div>
+            <div class="menu-item__price"><span>550</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DISCOUNTS ============ -->
+  <section id="discounts">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Tap To Save</div>
+        <h2>Bank discounts</h2>
+        <p>Pay with one of the cards below and the discount applies automatically at the counter.</p>
+      </div>
+      <div class="discounts__grid">
+        <div class="discount-card glass reveal">
+          <h3>Allied Bank</h3>
+          <div class="discount-row"><span>Infinite Visa Debit Card</span><span class="discount-badge">40% off</span></div>
+          <div class="discount-row"><span>Premium Visa Debit Card</span><span class="discount-badge">30% off</span></div>
+          <div class="discount-row"><span>Platinum Visa Debit Card</span><span class="discount-badge">20% off</span></div>
+        </div>
+        <div class="discount-card glass reveal">
+          <h3>United Bank (UBL)</h3>
+          <div class="discount-row"><span>UBL Visa Infinite Debit Card</span><span class="discount-badge">30% off</span></div>
+          <div class="discount-row"><span>UBL MC Signature Debit Card</span><span class="discount-badge">30% off</span></div>
+          <div class="discount-row"><span>UBL Visa Platinum Credit Card</span><span class="discount-badge">25% off</span></div>
+          <div class="discount-row"><span>Ex-SBL Visa Signature Credit Card</span><span class="discount-badge">25% off</span></div>
+          <div class="discount-row"><span>Ex-SBL Visa Platinum Credit Card</span><span class="discount-badge">25% off</span></div>
+          <div class="discount-row"><span>Ex-SBL MC Platinum Credit Card</span><span class="discount-badge">25% off</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section id="gallery">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Inside Remix</div>
+        <h2>A look around</h2>
+        <p>The counter, the crates, and everything that comes out of the kitchen.</p>
+      </div>
+      <div class="gallery__grid reveal">
+        <div class="gallery__item"><img src="drinks-lineup.jpg" alt="Four iced drinks lined up on the Remix counter" loading="lazy"><div class="gallery__cap">Iced drink lineup</div></div>
+        <div class="gallery__item"><img src="storefront.jpg" alt="Remix storefront sign and glass block facade" loading="lazy"><div class="gallery__cap">The storefront</div></div>
+        <div class="gallery__item"><img src="sandwich-spread.jpg" alt="A spread of Remix sandwiches on a tray" loading="lazy"><div class="gallery__cap">Sandwich spread</div></div>
+        <div class="gallery__item"><img src="vinyl-wall.jpg" alt="Wall of vinyl records on display at Remix" loading="lazy"><div class="gallery__cap">The record wall</div></div>
+        <div class="gallery__item"><img src="caprese.jpg" alt="Caprese sandwich held up at Remix" loading="lazy"><div class="gallery__cap">Caprese sandwich</div></div>
+        <div class="gallery__item"><img src="interior-seating.jpg" alt="Seating area with colorful artwork at Remix" loading="lazy"><div class="gallery__cap">Seating &amp; art</div></div>
+        <div class="gallery__item"><img src="sandwich-tray.jpg" alt="Tray of assorted Remix sandwiches" loading="lazy"><div class="gallery__cap">Fresh off the pass</div></div>
+        <div class="gallery__item"><img src="vinyl-comics.jpg" alt="Vinyl record and comic books on a shelf" loading="lazy"><div class="gallery__cap">Records &amp; comics</div></div>
+        <div class="gallery__item"><img src="stairs-sign.jpg" alt="Remix sign near the staircase" loading="lazy"><div class="gallery__cap">Upstairs</div></div>
+        <div class="gallery__item"><img src="phone.jpg" alt="Vintage yellow rotary phone" loading="lazy"><div class="gallery__cap">The house phone</div></div>
+        <div class="gallery__item"><img src="grabgo.jpg" alt="Remix grab and go bags and box" loading="lazy"><div class="gallery__cap">Grab &amp; go</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VISIT ============ -->
+  <section id="visit">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Find Us</div>
+        <h2>Visit Remix</h2>
+        <p>Gulberg III, open every day of the week.</p>
+      </div>
+      <div class="visit__grid">
+        <div class="visit__info glass reveal">
+          <div class="visit__row">
+            <div class="k">Address</div>
+            <div class="v">81-D/1 Main Boulevard, Gulberg Block D1 III, Lahore, 54660, Pakistan</div>
+          </div>
+          <div class="visit__row">
+            <div class="k">Hours</div>
+            <div class="v">Open daily<small>8:00 AM – 11:00 PM</small></div>
+          </div>
+          <div class="visit__row">
+            <div class="k">Phone</div>
+            <div class="v">0300 8681903</div>
+          </div>
+          <div class="visit__row">
+            <div class="k">Online</div>
+            <div class="v">@remix.social<small>Coffee shop · 6.3k followers</small></div>
+          </div>
+          <div class="visit__actions">
+            <a href="https://maps.app.goo.gl/yVWTCoCUancdVLTk6?g_st=ic" target="_blank" rel="noopener" class="glass-btn glass-btn--solid">Get directions</a>
+            <a href="https://instagram.com/remix.social" target="_blank" rel="noopener" class="glass-btn">Follow on Instagram</a>
+          </div>
+        </div>
+        <div class="visit__photo reveal">
+          <img src="stairs-sign.jpg" alt="Remix sign inside the cafe near the staircase">
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer__row">
+      <a href="#top" class="footer__brand">
+        <img src="logo.png" alt="Remix logo">
+        REMIX
+      </a>
+      <div class="footer__links">
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="https://instagram.com/remix.social" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://maps.app.goo.gl/yVWTCoCUancdVLTk6?g_st=ic" target="_blank" rel="noopener">Directions</a>
+      </div>
+    </div>
+    <div class="footer__note">Coffee shop · 81-D/1 Main Boulevard, Gulberg Block D1 III, Lahore, 54660, Pakistan · Open daily 8am–11pm</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
